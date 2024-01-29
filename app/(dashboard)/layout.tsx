@@ -2,7 +2,7 @@ import Footer from "@/components/root/Footer";
 import Hero from "@/components/root/Hero";
 import Navbar from "@/components/root/Navbar";
 import VideoBg from "@/components/root/VideoBg";
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
 function Layout({ children }: { children: ReactNode }) {
   return (
