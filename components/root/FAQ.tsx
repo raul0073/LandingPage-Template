@@ -59,8 +59,8 @@ const itemStyle = {
 };
 function FAQ() {
 	return (
-		<section className="faq w-full lg:w-2/3 lg:m-auto p-4 flex flex-col justify-center items-center min-h-[90vh] mt-4">
-			<h2 className="header text-4xl font-bold text-foreground mb-4">
+		<section className="faq w-full lg:w-2/3 lg:m-auto lg:justify-center p-4 flex flex-col justify-center items-center min-h-[90vh] mt-4">
+			<h2 className="header text-4xl font-bold text-foreground mb-12">
 				{" "}
 				שאלות קיטבג
 			</h2>
