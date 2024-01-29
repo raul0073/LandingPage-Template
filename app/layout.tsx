@@ -5,8 +5,8 @@ import "./globals.scss";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Inflatables Hire",
-  description: "rm app",
+  title: "Landing Page Template",
+  description: "rm design",
 };
 
 export default function RootLayout({
