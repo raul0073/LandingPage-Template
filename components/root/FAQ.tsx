@@ -9,33 +9,29 @@ import {
 import { animate, motion } from "framer-motion";
 const faqList = [
 	{
-		q: "אם אני רוצה להעביר לכם כסף סתם ככה, איך אפשר?",
+		q: "האם ניתן לשלם באשראי?",
 		a: "בטח שאפשר. דברו איתנו דחוף",
 	},
 	{
-		q: "אם אני רוצה להעביר לכם כסף סתם ככה, איך אפשר?",
+		q: "האם ניתן לשלם באשראי?",
 		a: "בטח שאפשר. דברו איתנו דחוף",
 	},
 	{
-		q: "אם אני רוצה להעביר לכם כסף סתם ככה, איך אפשר?",
+		q: "האם ניתן לשלם באשראי?",
 		a: "בטח שאפשר. דברו איתנו דחוף",
 	},
 	{
-		q: "אם אני רוצה להעביר לכם כסף סתם ככה, איך אפשר?",
+		q: "האם ניתן לשלם באשראי?",
 		a: "בטח שאפשר. דברו איתנו דחוף",
 	},
 	{
-		q: "אם אני רוצה להעביר לכם כסף סתם ככה, איך אפשר?",
+		q: "האם ניתן לשלם באשראי?",
 		a: "בטח שאפשר. דברו איתנו דחוף",
 	},
 	{
-		q: "אם אני רוצה להעביר לכם כסף סתם ככה, איך אפשר?",
+		q: "האם ניתן לשלם באשראי?",
 		a: "בטח שאפשר. דברו איתנו דחוף",
-	},
-	{
-		q: "אם אני רוצה להעביר לכם כסף סתם ככה, איך אפשר?",
-		a: "בטח שאפשר. דברו איתנו דחוף",
-	},
+	}
 ];
 
 const container = {
@@ -65,14 +61,14 @@ function FAQ() {
 				שאלות קיטבג
 			</h2>
 			<motion.div
-				className="container"
+				className="container p-0"
 				variants={container}
 				initial="hidden"
 				whileInView={"visible"}>
 				<Accordion type="single" collapsible className="w-full">
 					{faqList.map((item, index) => {
 						return (
-							<motion.div key={index} className="item" variants={itemStyle}>
+							<motion.div key={index} className="item px-1 py-1" variants={itemStyle}>
 								<AccordionItem value={`item-${index}`}>
 									<AccordionTrigger>{item.q}</AccordionTrigger>
 									<AccordionContent className="text-primary">

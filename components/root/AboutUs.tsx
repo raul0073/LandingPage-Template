@@ -19,13 +19,13 @@ const slideData = [
 function AboutUs() {
 	return (
 		<>
-			<section className="about w-[80%] m-auto p-4 flex flex-col md:flex-row lg:justify-between justify-center items-center min-h-[90vh] mt-20 lg:mt-2">
+			<section className="about w-[90%] m-auto p-1 lg:p-4 flex flex-col  justify-evenly items-center min-h-[90vh] mt-20 lg:flex-row lg:mt-2">
 				<motion.div
-					className="content w-full lg:w-1/2 order-1 md:order-1"
+					className="content w-[90%] lg:w-[60%] order-1 md:order-1"
 					initial={{ opacity: 0, x: 50 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.5 }}>
-					<h2 className="header text-4xl font-bold text-foreground mb-4">
+					<h2 className="header text-4xl font-bold text-foreground mb-4  text-gray-500">
 						מי אנחנו?
 					</h2>
 					<p>
@@ -38,12 +38,12 @@ function AboutUs() {
 					initial={{ opacity: 0, x: -50 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.5 }}
-					className="carousel w-full lg:w-1/3 md:w-1/4 order-2 md:order-2">
-					<Carousel>
+					className="carousel w-1/2  md:w-1/4 order-2 md:order-2 flex items-center">
+					<Carousel className="w-full h-full object-cover">
 						<CarouselContent className="flex items-center">
 							{slideData.map((_, index) => (
 								<CarouselItem key={index}>
-									<Image src={`${_}`} alt="pic" width={300} height={300} className="max-h-[500px] max-w[300px]"/>
+									<Image src={`${_}`} alt="pic" width={300} height={300} className="object-cover w-full min-h-full"/>
 								</CarouselItem>
 							))}
 						</CarouselContent>

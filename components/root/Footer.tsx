@@ -1,21 +1,17 @@
-import React from "react";
+import { FaPhone, FaTelegram, FaWhatsapp } from "react-icons/fa";
 import { Separator } from "../ui/separator";
-import { CheckIcon, FaceIcon, HandIcon } from "@radix-ui/react-icons";
 import Logo from "./Logo";
-import { FaWhatsapp, FaPhone, FaTelegram } from "react-icons/fa";
 
 function Footer() {
   return (
     <>
       <Separator />
-      <section className="flex w-full justify-center items-center h-[10vh]">
-        <div className="flex justify-between w-[90%] lg:w-[60%] items-center">
-        <div className="social flex justify-between w-1/3">
-          <FaPhone fill="green" className="cursor-pointer hover:fill-primary-foreground"/>
-          <FaWhatsapp fill="green" className="cursor-pointer hover:fill-primary-foreground"/>
-          <FaTelegram fill="green" className="cursor-pointer hover:fill-primary-foreground"/>
-        </div>
-          <Logo />
+      <section className="flex w-full flex-col justify-center items-center h-[20vh]">
+        <Logo />
+                <div className="social flex justify-evenly w-1/3 mt-8">
+          <FaPhone className="cursor-pointer fill-muted-foreground hover:fill-primary-foreground"/>
+          <FaWhatsapp className="cursor-pointer fill-muted-foreground hover:fill-primary-foreground"/>
+          <FaTelegram className="cursor-pointer fill-muted-foreground hover:fill-primary-foreground"/>
         </div>
       </section>
       <Separator />

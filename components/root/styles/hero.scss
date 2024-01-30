@@ -33,13 +33,31 @@
 		.highlight-container {
 			display: inline-block;
 		}
+		.highlight-container::after{
+						content: " ";
+			display: block;
+			height: 90%;
+			opacity: 0;
+			margin-left: -1px;
+			margin-right: -1px;
+			position: absolute;
+			background: blue;
+			transform: rotate(.8deg);
+			bottom: -3px;
+			right: -2px;
+			border-radius: 3% 0% 2% 0%;
+			padding: 10px 3px 3px 10px;
+			animation: paint 0.5s ease 4s forwards;
+			z-index: -1;
+			
+		}
 		.highlight-container:before {
 			content: " ";
 			display: block;
 			height: 90%;
 			opacity: 0;
-			margin-left: -3px;
-			margin-right: -3px;
+			margin-left: -1px;
+			margin-right: -1px;
 			position: absolute;
 			background: blue;
 			transform: rotate(-0.5deg);
@@ -48,12 +66,12 @@
 			border-radius: 3% 0% 2% 0%;
 			padding: 10px 3px 3px 10px;
 			animation: paint 0.5s ease 4s forwards;
-
+	
 			@keyframes paint {
-				from {
+				0% {
 					width: 2%;
 				}
-				to {
+				100%{
 					width: 100%;
 					opacity: 1;
 				}
