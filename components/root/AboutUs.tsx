@@ -19,9 +19,12 @@ const slideData = [
 function AboutUs() {
 	return (
 		<>
-			<section className="about w-[90%] m-auto p-1 lg:p-4 flex flex-col  justify-evenly items-center min-h-[90vh] mt-20 lg:flex-row lg:mt-2">
+			<section
+			id="about"
+			 className="w-[90%] m-auto p-1 lg:p-4 flex flex-col  justify-evenly items-center min-h-[90vh] mt-20 lg:flex-row lg:mt-2">
 				<motion.div
 					className="content w-[90%] lg:w-[60%] order-1 md:order-1"
+
 					initial={{ opacity: 0, x: 50 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.5 }}>

@@ -16,7 +16,7 @@ import { Textarea } from "../ui/textarea";
 function ServiceArea() {
 	return (
 		<section
-			id="#contact"
+			id="contact"
 			className="serviceAre w-full flex flex-col bg-primary-foreground min-h-[80vh] p-1 lg:p-8 items-center justify-center">
 			<motion.div
 				initial={{ x: -50 }}

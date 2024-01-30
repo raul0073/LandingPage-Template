@@ -41,11 +41,14 @@ const cardsData = [
 function Services() {
 	return (
 		<>
-		<section className="services mt-30 w-full flex flex-col justify-center items-center lg:w-[80%] lg:mx-auto my-40 h-full">
+		<section 
+		id="services"
+		className="services mt-30 w-full flex flex-col justify-center items-center lg:w-[80%] lg:mx-auto lg:mt-[20vh] my-40 h-full">
 			<motion.div
 				initial={{ opacity: 0, scale: 0.1 }}
 				whileInView={{ opacity: 1, scale: 1 }}
 				transition={{ duration: 0.5 }}
+				
 				className="w-[80%] intro flex justify-center flex-col items-center mb-12 mt-12 lg:w-[50%]">
 				<h2 className="header text-4xl font-bold text-foreground mb-8">
 					השירותים שלנו
@@ -99,7 +102,7 @@ function Services() {
 			</div>
 			
 		</section>
-		<Separator className="my-20" />
+
 		</>
 	);
 }
