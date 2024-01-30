@@ -1,9 +1,7 @@
 "use client";
-import Image from "next/image";
-import React from "react";
-import { Parallax } from "react-next-parallax";
 import { motion } from "framer-motion";
-import { Separator } from "../ui/separator";
+import Image from "next/image";
+import { Parallax } from "react-next-parallax";
 
 function Gallery() {
 	return (
