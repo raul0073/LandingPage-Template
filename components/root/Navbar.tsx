@@ -33,7 +33,7 @@ export default function Navbar() {
 				<section className={`px-4 py-2 lg:p-4 w-full`}>
 					<div className="menu flex justify-between items-center w-full">
 						{menuOpen ? "" : <Logo />}
-						<div className="md:hidden transition-all duration-500">
+						<div className="md:hidden">
 							{scrolling ? (
 								<button
 									className={`text-gray-500 focus:outline-none text-4xl ${
@@ -54,7 +54,7 @@ export default function Navbar() {
 							</button>
 						</div>
 						<div
-							className={`w-full md:flex flex-grow justify-end items-center transition-all duration-200 ${
+							className={`w-full md:flex flex-grow justify-end items-center  ${
 								menuOpen ? "flex justify-center" : "hidden"
 							}`}>
 							<Button
