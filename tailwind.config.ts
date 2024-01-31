@@ -67,10 +67,15 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "paint": {
+          		from: {width: '2%'},
+              to: {width: '100%', opacity: "1"}
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "paint": "0.5s ease 2s forwards"
       },
     },
   },

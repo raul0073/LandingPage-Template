@@ -6,6 +6,7 @@ import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 import Logo from "./Logo";
 
+
 export default function Navbar() {
 	const [scrolling, setScrolling] = useState(false);
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -24,6 +25,7 @@ export default function Navbar() {
 
 	return (
 		<>
+		
 			<div
 				className={`fixed w-full z-10 ${
 					scrolling ? "bg-primary transition-all duration-500" : ""
@@ -50,7 +52,9 @@ export default function Navbar() {
 								onClick={() => setMenuOpen(!menuOpen)}>
 								✕
 							</button>
+							
 						</div>
+
 						<div
 							className={`w-full md:flex flex-grow justify-end items-center  ${
 								menuOpen ? "flex justify-center" : "hidden"
