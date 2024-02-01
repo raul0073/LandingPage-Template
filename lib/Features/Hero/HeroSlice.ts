@@ -3,7 +3,7 @@
 
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
-export type HeroSlice = {
+export type HeroSlice<T> = {
     header: {
         value: string,
         init: string,
@@ -25,7 +25,7 @@ export type HeroSlice = {
 }
 
 
-const initialState: HeroSlice = {
+const initialState: HeroSlice<string> = {
     header: {
         value: 'שם חברה',
         init: 'שם חברה',
@@ -48,7 +48,7 @@ export const HeroSlice = createSlice({
   name: 'hero',
   initialState,
   reducers: {
-    editHero: (state, action: PayloadAction<{ sectionName: keyof HeroSlice; value: string }>) => {
+    editHero: (state, action: PayloadAction<{ sectionName: keyof HeroSlice<string>; value: string }>) => {
       const { sectionName, value } = action.payload;
       state[sectionName].value = value;
     },

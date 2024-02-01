@@ -7,7 +7,9 @@ function Footer() {
     <>
       <Separator />
       <section className="flex w-full flex-col justify-center items-center h-[20vh]">
-        <Logo className="text-primary-foreground" />
+      <div className="flex justify-center">
+        <Logo className="text-primary-foreground flex" />
+      </div>
                 <div className="social flex justify-around w-1/3 mt-8">
           <FaPhone className="text-xl cursor-pointer fill-muted-foreground hover:fill-primary-foreground"/>
           <FaWhatsapp className="text-xl cursor-pointer fill-muted-foreground hover:fill-primary-foreground"/>

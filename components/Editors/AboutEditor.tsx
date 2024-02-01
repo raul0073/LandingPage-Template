@@ -1,7 +1,6 @@
 "use client";
 
-import { editAbout } from "@/lib/Features/About/AboutSlice";
-import { HeroSlice, editHero } from "@/lib/Features/Hero/HeroSlice";
+import { AboutSlice, editAbout } from "@/lib/Features/About/AboutSlice";
 import { RootState } from "@/lib/Store";
 import { FaEdit } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,16 +11,16 @@ import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Textarea } from "../ui/textarea";
 import { TooltipComp } from "./Tooltip";
 
-type EditHeroProps<T> = {
+type EditComponentProps<T> = {
 	slice: string;
-	elemName: keyof HeroSlice<T>
+	elemName: keyof AboutSlice<T>
     textArea?: boolean
 };
 
-const HeroEditor = <T,>({ slice, elemName, textArea }: EditHeroProps<T>) => {
+const AboutEditor = <T,>({ slice, elemName, textArea }: EditComponentProps<T>) => {
 	const dispatch = useDispatch();
 	const value = useSelector(
-		(state: RootState) => (state.hero[elemName] as { value: string }).value
+		(state: RootState) => (state.about[elemName] as { value: string }).value
 	);
 
 	return (
@@ -36,13 +35,13 @@ const HeroEditor = <T,>({ slice, elemName, textArea }: EditHeroProps<T>) => {
 			<PopoverContent className="w-80">
 				<div>
 					<Label>
-                        חלק ראשי
+                        אודותינו
                     </Label>
 					{!textArea ? (
                     <Input
 						onChange={(e) =>
 							dispatch(
-								editHero({ sectionName: elemName, value: e.target.value })
+								editAbout({ sectionName: elemName, value: e.target.value })
 							)
 						}
 						type="text"
@@ -51,7 +50,7 @@ const HeroEditor = <T,>({ slice, elemName, textArea }: EditHeroProps<T>) => {
                     ): <Textarea
 						onChange={(e) =>
 							dispatch(
-								editHero({ sectionName: elemName, value: e.target.value })
+								editAbout({ sectionName: elemName, value: e.target.value })
 							)
 						}
 						cols={5}
@@ -64,4 +63,4 @@ const HeroEditor = <T,>({ slice, elemName, textArea }: EditHeroProps<T>) => {
 	);
 };
 
-export default HeroEditor;
+export default AboutEditor;
