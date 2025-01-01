@@ -1,0 +1,15 @@
+@import './../../../../globals.scss';
+
+.hero {
+	position: relative;
+	&::before{
+		position: absolute;
+		bottom: -12vh;
+		left: 0;
+		content: "";
+		width: 110%;
+		height: 20vh;
+		background-color: $pastel;
+		transform: skewY(-3deg);
+	}
+}

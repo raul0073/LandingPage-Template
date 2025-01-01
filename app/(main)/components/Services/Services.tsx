@@ -1,17 +1,9 @@
 "use client";
 import React from "react";
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardFooter,
-	CardHeader,
-	CardTitle,
-} from "../ui/card";
 import Image from "next/image";
-import { Button } from "../ui/button";
 import { motion } from "framer-motion";
-import { Separator } from "../ui/separator";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "react-day-picker";
 const cardsData = [
 	{
 		name: "package name",
